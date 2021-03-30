@@ -3,29 +3,30 @@
 <head>
 <!-- basic -->
 <meta charset="utf-8">
+{% load static %}
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <!-- mobile metas -->
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="viewport" content="initial-scale=1, maximum-scale=1">
 <!-- site metas -->
-<title>It.Next - IT Service Responsive Html Theme</title>
+<title>Fire Intelligence Squad pvt.ltd.</title>
 <meta name="keywords" content="">
 <meta name="description" content="">
 <meta name="author" content="">
 <!-- site icons -->
-<link rel="icon" href="images/fevicon/IMG_20210218_211157.jpg" type="image/gif" />
+<link rel="icon" href="{% static 'images/fevicon/IMG_20210218_211157.jpg' %}" type="image/gif" />
 <!-- bootstrap css -->
-<link rel="stylesheet" href="css/bootstrap.min.css" />
+<link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}" />
 <!-- Site css -->
-<link rel="stylesheet" href="css/style.css" />
+<link rel="stylesheet" href="{% static 'css/style.css' %}" />
 <!-- responsive css -->
-<link rel="stylesheet" href="css/responsive.css" />
+<link rel="stylesheet" href="{% static 'css/responsive.css' %}" />
 <!-- colors css -->
-<link rel="stylesheet" href="css/colors1.css" />
+<link rel="stylesheet" href="{% static 'css/colors1.css' %}" />
 <!-- custom css -->
-<link rel="stylesheet" href="css/custom.css" />
+<link rel="stylesheet" href="{% static 'css/custom.css' %}" />
 <!-- wow Animation css -->
-<link rel="stylesheet" href="css/animate.css" />
+<link rel="stylesheet" href="{% static 'css/animate.css' %}" />
 <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
       <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
@@ -33,7 +34,7 @@
 </head>
 <body id="default_theme" class="it_service service_detail">
 <!-- loader -->
-<div class="bg_load"> <img class="loader_animation" src="images/loaders/loader_1.png" alt="#" /> </div>
+<div class="bg_load"> <img class="loader_animation" src="{% static 'images/loaders/loader_1.png' %}" alt="#" /> </div>
 <!-- end loader -->
 <!-- header -->
 <header id="default_header" class="header_style_1">
@@ -43,12 +44,12 @@
       <div class="row">
         <div class="col-md-8">
           <div class="full">
-            <div class="topbar-left">
+            <!-- <div class="topbar-left">
               <ul class="list-inline">
                 <li> <span class="topbar-label"><i class="fa  fa-home"></i></span> <span class="topbar-hightlight">540 Lorem Ipsum New York, AB 90218</span> </li>
                 <li> <span class="topbar-label"><i class="fa fa-envelope-o"></i></span> <span class="topbar-hightlight"><a href="mailto:info@yourdomain.com">info@yourdomain.com</a></span> </li>
               </ul>
-            </div>
+            </div> -->
           </div>
         </div>
         <div class="col-md-4 right_section_header_top">
@@ -64,7 +65,7 @@
             </div>
           </div>
           <div class="float-right">
-            <div class="make_appo"> <a class="btn white_btn" href="make_appointment.html">Make Appointment</a> </div>
+            <div class="make_appo"> <a class="btn white_btn" href="/appointment">Make Appointment</a> </div>
           </div>
         </div>
       </div>
@@ -77,7 +78,7 @@
       <div class="row">
         <div class="col-lg-3 col-md-12 col-sm-12 col-xs-12">
           <!-- logo start -->
-          <div class="logo"> <a href="it_home.html"><img src="images/logos/LOGO.jpg" alt="logo" /></a> </div>
+          <div class="logo"> <a href="/it_home"><img src="{% static 'images/logos/LOGO.jpg' %}" alt="logo" /></a> </div>
           <!-- logo end -->
         </div>
         <div class="col-lg-9 col-md-12 col-sm-12 col-xs-12">
@@ -85,20 +86,20 @@
           <div class="menu_side">
             <div id="navbar_menu">
               <ul class="first-ul">
-                <li> <a href="it_home.html">Home</a>
+                <li> <a href="/home">Home</a>
                   <ul>
-                    <li><a href="it_home.html">It Home Page</a></li>
-                    <li><a href="it_home_dark.html">It Dark Home Page</a></li>
+                    <li><a href="/home">It Home Page</a></li>
+                    <li><a href="/home_dark">It Dark Home Page</a></li>
                   </ul>
                 </li>
-                <li><a href="it_about.html">About Us</a></li>
-                <li> <a class="active" href="it_service.html">Service</a>
+                <li><a href="/about">About Us</a></li>
+                <li> <a class="active" href="/service_detail">Service</a>
                   <ul>
-                    <li><a href="it_service_list.html">Services list</a></li>
-                    <li><a href="it_service_detail.html">Services Detail</a></li>
+                    <li><a href="/service_list">Services list</a></li>
+                    <li><a href="/service_detail">Services Detail</a></li>
                   </ul>
                 </li>
-                <li> <a href="it_blog.html">Blog</a>
+                <!-- <li> <a href="it_blog.html">Blog</a>
                   <ul>
                     <li><a href="it_blog.html">Blog List</a></li>
                     <li><a href="it_blog_grid.html">Blog Grid</a></li>
@@ -113,7 +114,7 @@
                     <li><a href="it_privacy_policy.html">Privacy Policy</a></li>
                     <li><a href="it_error.html">Error 404</a></li>
                   </ul>
-                </li>
+                </li> -->
                 <li> <a href="it_shop.html">Shop</a>
                   <ul>
                     <li><a href="it_shop.html">Shop List</a></li>
@@ -154,7 +155,7 @@
             <div class="title-holder-cell text-left">
               <h1 class="page-title">Services Detail</h1>
               <ol class="breadcrumb">
-                <li><a href="index.html">Home</a></li>
+                <li><a href="/home">Home</a></li>
                 <li class="active">Services Detail</li>
               </ol>
             </div>
@@ -173,7 +174,7 @@
         <div class="row">
           <div class="col-md-12 service_blog margin_bottom_50">
             <div class="full">
-              <div class="service_img"> <img class="img-responsive" src="images/it_service/post-02.jpg" alt="#" /> </div>
+              <div class="service_img"> <img class="img-responsive" src="{% static 'images/it_service/post-02.jpg' %}" alt="#" /> </div>
               <div class="service_cont">
                 <h3 class="service_head">Data recovery</h3>
                 <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
@@ -184,27 +185,27 @@
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis 
                   nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore
                   eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                <div class="bt_cont"> <a class="btn sqaure_bt" href="it_service_detail.html">View Service</a> </div>
+                <div class="bt_cont"> <a class="btn sqaure_bt" href="/service_detail/">View Service</a> </div>
               </div>
             </div>
           </div>
           <div class="col-md-6 service_blog margin_bottom_50">
             <div class="full">
-              <div class="service_img"> <img class="img-responsive" src="images/it_service/post-03.jpg" alt="#" /> </div>
+              <div class="service_img"> <img class="img-responsive" src="{% static 'images/it_service/post-03.jpg' %}" alt="#" /> </div>
               <div class="service_cont">
                 <h3 class="service_head">Network solutions</h3>
                 <p>Exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</p>
-                <div class="bt_cont"> <a class="btn sqaure_bt" href="it_service_detail.html">View Service</a> </div>
+                <div class="bt_cont"> <a class="btn sqaure_bt" href="/service_detail">View Service</a> </div>
               </div>
             </div>
           </div>
           <div class="col-md-6 service_blog margin_bottom_50">
             <div class="full">
-              <div class="service_img"> <img class="img-responsive" src="images/it_service/post-04.jpg" alt="#" /> </div>
+              <div class="service_img"> <img class="img-responsive" src="{% static 'images/it_service/post-04.jpg' %}" alt="#" /> </div>
               <div class="service_cont">
                 <h3 class="service_head">Data recovery</h3>
                 <p>Exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</p>
-                <div class="bt_cont"> <a class="btn sqaure_bt" href="it_service_detail.html">View Service</a> </div>
+                <div class="bt_cont"> <a class="btn sqaure_bt" href="/service_detail">View Service</a> </div>
               </div>
             </div>
           </div>
@@ -271,7 +272,7 @@
           <div class="col-md-4">
             <div class="full">
               <div class="service_blog_inner">
-                <div class="icon text_align_left"><img src="images/it_service/si1.png" alt="#"></div>
+                <div class="icon text_align_left"><img src="{% static 'images/it_service/si1.png' %}" alt="#"></div>
                 <h4 class="service-heading">Fast service</h4>
                 <p>Exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo.</p>
               </div>
@@ -280,7 +281,7 @@
           <div class="col-md-4">
             <div class="full">
               <div class="service_blog_inner">
-                <div class="icon text_align_left"><img src="images/it_service/si2.png" alt="#"></div>
+                <div class="icon text_align_left"><img src="{% static 'images/it_service/si2.png' %}" alt="#"></div>
                 <h4 class="service-heading">Secure payments</h4>
                 <p>Exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo.</p>
               </div>
@@ -289,7 +290,7 @@
           <div class="col-md-4">
             <div class="full">
               <div class="service_blog_inner">
-                <div class="icon text_align_left"><img src="images/it_service/si3.png" alt="#"></div>
+                <div class="icon text_align_left"><img src="{% static 'images/it_service/si3.png' %}" alt="#"></div>
                 <h4 class="service-heading">Expert team</h4>
                 <p>Exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo.</p>
               </div>
@@ -317,7 +318,7 @@
         <div class="row">
           <div class="col-md-4 col-sm-6">
             <div class="full team_blog_colum">
-              <div class="it_team_img"> <img class="img-responsive" src="images/it_service/team-member-1.jpg" alt="#"> </div>
+              <div class="it_team_img"> <img class="img-responsive" src="{% static 'images/it_service/team-member-1.jpg' %}" alt="#"> </div>
               <div class="team_feature_head">
                 <h4>Dean Michael</h4>
               </div>
@@ -336,7 +337,7 @@
           </div>
           <div class="col-md-4">
             <div class="full team_blog_colum">
-              <div class="it_team_img"> <img class="img-responsive" src="images/it_service/team-member-2.jpg" alt="#"> </div>
+              <div class="it_team_img"> <img class="img-responsive" src="{% static 'images/it_service/team-member-2.jpg' %}" alt="#"> </div>
               <div class="team_feature_head">
                 <h4>Ruby Jake</h4>
               </div>
@@ -355,7 +356,7 @@
           </div>
           <div class="col-md-4">
             <div class="full team_blog_colum">
-              <div class="it_team_img"> <img class="img-responsive" src="images/it_service/team-member-3.jpg" alt="#"> </div>
+              <div class="it_team_img"> <img class="img-responsive" src="{% static 'images/it_service/team-member-3.jpg' %}" alt="#"> </div>
               <div class="team_feature_head">
                 <h4>David Hussay</h4>
               </div>
@@ -389,7 +390,7 @@
           <div class="side_bar_blog">
             <h4>GET A QUOTE</h4>
             <p>An duo lorem altera gloriatur. No imperdiet adver sarium pro. No sit sumo lorem. Mei ea eius elitr consequ unturimperdiet.</p>
-            <a class="btn sqaure_bt" href="it_service.html">View Service</a> </div>
+            <a class="btn sqaure_bt" href="/service_list">View Service</a> </div>
           <div class="side_bar_blog">
             <h4>OUR SERVICE</h4>
             <div class="categary">
@@ -460,7 +461,7 @@
                 <div class="testimonial-container">
                   <div class="testimonial-content"> You guys rock! Thank you for making it painless, pleasant and most of all hassle free! I wish I would have thought of it first. 
                     I am really satisfied with my first laptop service.</div>
-                  <div class="testimonial-photo"> <img src="images/it_service/client1.jpg" class="img-responsive" alt="#" width="150" height="150"> </div>
+                  <div class="testimonial-photo"> <img src="{% static 'images/it_service/client1.jpg' %}" class="img-responsive" alt="#" width="150" height="150"> </div>
                   <div class="testimonial-meta">
                     <h4>Maria Anderson</h4>
                     <span class="testimonial-position">CFO, Tech NY</span> </div>
@@ -470,7 +471,7 @@
                 <div class="testimonial-container">
                   <div class="testimonial-content"> You guys rock! Thank you for making it painless, pleasant and most of all hassle free! I wish I would have thought of it first. 
                     I am really satisfied with my first laptop service.</div>
-                  <div class="testimonial-photo"> <img src="images/it_service/client2.jpg" class="img-responsive" alt="#" width="150" height="150"> </div>
+                  <div class="testimonial-photo"> <img src="{% static 'images/it_service/client2.jpg' %}" class="img-responsive" alt="#" width="150" height="150"> </div>
                   <div class="testimonial-meta">
                     <h4>Maria Anderson</h4>
                     <span class="testimonial-position">CFO, Tech NY</span> </div>
@@ -480,7 +481,7 @@
                 <div class="testimonial-container">
                   <div class="testimonial-content"> You guys rock! Thank you for making it painless, pleasant and most of all hassle free! I wish I would have thought of it first. 
                     I am really satisfied with my first laptop service.</div>
-                  <div class="testimonial-photo"> <img src="images/it_service/client3.jpg" class="img-responsive" alt="#" width="150" height="150"> </div>
+                  <div class="testimonial-photo"> <img src="{% static 'images/it_service/client3.jpg' %}" class="img-responsive" alt="#" width="150" height="150"> </div>
                   <div class="testimonial-meta">
                     <h4>Maria Anderson</h4>
                     <span class="testimonial-position">CFO, Tech NY</span> </div>
@@ -504,10 +505,10 @@
       <div class="col-md-12">
         <div class="full">
           <div class="contact_us_section">
-            <div class="call_icon"> <img src="images/it_service/phone_icon.png" alt="#" /> </div>
+            <div class="call_icon"> <img src="{% static 'images/it_service/phone_icon.png' %}" alt="#" /> </div>
             <div class="inner_cont">
-              <h2>REQUEST A FREE QUOTE</h2>
-              <p>Get answers and advice from people you want it from.</p>
+              <h2>Any Query</h2>
+              <p>Get answers</p>
             </div>
             <div class="button_Section_cont"> <a class="btn dark_gray_bt" href="it_contact.html">Contact us</a> </div>
           </div>
@@ -524,11 +525,11 @@
       <div class="col-md-12">
         <div class="full">
           <ul class="brand_list">
-            <li><img src="images/it_service/brand_icon1.png" alt="#" /></li>
-            <li><img src="images/it_service/brand_icon2.png" alt="#" /></li>
-            <li><img src="images/it_service/brand_icon3.png" alt="#" /></li>
-            <li><img src="images/it_service/brand_icon4.png" alt="#" /></li>
-            <li><img src="images/it_service/brand_icon5.png" alt="#" /></li>
+            <li><img src="{% static 'images/it_service/brand_icon1.png' %}" alt="#" /></li>
+            <li><img src="{% static 'images/it_service/brand_icon2.png' %}" alt="#" /></li>
+            <li><img src="{% static 'images/it_service/brand_icon3.png' %}" alt="#" /></li>
+            <li><img src="{% static 'images/it_service/brand_icon4.png' %}" alt="#" /></li>
+            <li><img src="{% static 'images/it_service/brand_icon5.png' %}" alt="#" /></li>
           </ul>
         </div>
       </div>
@@ -633,14 +634,14 @@
 </footer>
 <!-- end footer -->
 <!-- js section -->
-<script src="js/jquery.min.js"></script>
-<script src="js/bootstrap.min.js"></script>
+<script src="{% static 'js/jquery.min.js' %}"></script>
+<script src="{% static 'js/bootstrap.min.js' %}"></script>
 <!-- menu js -->
-<script src="js/menumaker.js"></script>
+<script src="{% static 'js/menumaker.js' %}"></script>
 <!-- wow animation -->
-<script src="js/wow.js"></script>
+<script src="{% static 'js/wow.js' %}"></script>
 <!-- custom js -->
-<script src="js/custom.js"></script>
+<script src="{% static 'js/custom.js' %}"></script>
 <script>
 
       // This example adds a marker to indicate the position of Bondi Beach in Sydney,
@@ -739,7 +740,7 @@
              ]
 		});
 
-        var image = 'images/it_service/location_icon_map_cont.png';
+        var image = "{% static 'images/it_service/location_icon_map_cont.png' %}";
         var beachMarker = new google.maps.Marker({
           position: {lat: 40.645037, lng: -73.880224},
           map: map,
