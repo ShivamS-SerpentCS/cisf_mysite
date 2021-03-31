@@ -1,5 +1,7 @@
 from django.http import HttpResponse
 from django.shortcuts import render
+from django.views.generic import View, ListView, UpdateView, DeleteView
+# from .forms import Userform
 
 def homehtml(request):
     return render(request,'it_home.html')
@@ -46,8 +48,30 @@ def faq(request):
 def shop_detail(request):
     return render(request,'it_shop_detail.html')
 
-def contact(request):
-    return render(request,'it_contact.html')
+# class ContactUsView(View):
+
+#     # @transaction.atomic
+#     def get(self, request):
+#         form = Userform
+#         print("getttttttttt")
+#         print("getttttttttt")
+#         # form = Projectform
+#         return render(request, 'it_contact.html',{'form':form})
+
+#     # @transaction.atomic
+#     def post(self, request, **kwargs):
+#         # form = Userform
+#         form = Userform(request.POST)
+#         print("fffffff")
+#         print("email_id",request.POST.get('email_id'))
+#         print(request.POST)
+#         return render(request, 'it_contact.html')
+#         pass
+    
+    
+# # @transaction.atomic
+# # def contact(request):
+# #     return render(request,'it_contact.html')
 
 def term_condition(request):
     return render(request,'it_term_condition.html')
@@ -62,6 +86,6 @@ def news(request):
 #     return render(request,'it_news.html')
 
 
-#def showdata(HttpRequest):
- #   web = HttpRequest.GET.get(
+# #def showdata(HttpRequest):
+#  #   web = HttpRequest.GET.get(
 

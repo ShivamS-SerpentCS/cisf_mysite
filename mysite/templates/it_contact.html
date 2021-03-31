@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+{% load static %}
 <!-- basic -->
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -13,7 +14,7 @@
 <meta name="description" content="">
 <meta name="author" content="">
 <!-- site icons -->
-<link rel="icon" href="images/fevicon/IMG_20210218_211157.jpg" type="image/gif" />
+<link rel="icon" href="{% static 'images/fevicon/IMG_20210218_211157.jpg'%}" type="image/gif" />
 <!-- bootstrap css -->
 <link rel="stylesheet" href="css/bootstrap.min.css" />
 <!-- Site css -->
@@ -229,25 +230,28 @@
               <h4>GET IN TOUCH</h4>
               <p>Our goal is to provide the best customer service and to answer all of your questions in a timely manner.</p>
               <div class="form_section">
-                <form class="form_contant" action="index.html">
+                <!-- <form class="form_contant" action="index.html"> -->
+                <form action="{% url 'HomeView' %}" method="post" class="form_contant">
+                  {%csrf_token%}
                   <fieldset>
                   <div class="row">
                     <div class="field col-lg-6 col-md-6 col-sm-12 col-xs-12">
                       <input class="field_custom" placeholder="Websire URL" type="text" required />
                     </div>
                     <div class="field col-lg-6 col-md-6 col-sm-12 col-xs-12">
-                      <input class="field_custom" placeholder="Your name" type="text" required />
+                      <input class="field_custom" placeholder="Your name" type="text" name="name" required />
                     </div>
                     <div class="field col-lg-6 col-md-6 col-sm-12 col-xs-12">
-                      <input class="field_custom" placeholder="Email adress" type="email" required />
+                      <input class="field_custom" placeholder="Email adress" type="email" name="email_id" required />
                     </div>
                     <div class="field col-lg-6 col-md-6 col-sm-12 col-xs-12">
-                      <input class="field_custom" placeholder="Phone number" type="text" required />
+                      <input class="field_custom" placeholder="Phone number" type="text" name="phone" required />
                     </div>
                     <div class="field col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                      <textarea class="field_custom" placeholder="Messager" required ></textarea>
+                      <textarea class="field_custom" placeholder="Messager" name="messager" required ></textarea>
                     </div>
-                    <div class="center"><a class="btn main_bt" href="#">SUBMIT NOW</a></div>
+                    <!-- <div class="center"><a class="btn main_bt" href="#">SUBMIT NOW</a></div> -->
+                    <button type="submit" class="btn btn-success">SUBMIT NOW</button>
                   </div>
                   </fieldset>
                 </form>
