@@ -76,6 +76,9 @@ def shop_detail(request):
 def term_condition(request):
     return render(request,'it_term_condition.html')
 
+def contact(request):
+    return render(request,'it_contact.html')    
+
 def privacy_policy(request):
     return render(request,'it_privacy_policy.html')
 

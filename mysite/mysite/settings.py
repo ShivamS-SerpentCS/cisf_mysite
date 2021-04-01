@@ -92,8 +92,8 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
         'NAME': 'cisf_v1',
-        'USER': 'serpentcs',
-        'PASSWORD': 'serpentcs',
+        'USER': 'tushar',
+        'PASSWORD':'tushar',
         'HOST': 'localhost',
         'PORT': '5432',
     }

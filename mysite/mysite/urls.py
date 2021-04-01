@@ -35,6 +35,7 @@ urlpatterns = [
     path('price/',views.price),
     path('faq/',views.faq),
     path('shop_detail/',views.shop_detail),
+    path('contact/',views.contact),
     # path('contact/',ContactUsView.as_view(),name='contact_us'),
     path('term_condition/',views.term_condition),
     path('privacy_policy/',views.privacy_policy),
